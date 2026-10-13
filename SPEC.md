@@ -82,7 +82,7 @@ Severity levels: `error`, `warn`, `info`.
   punctuation and backticks. Report both locations.
 - `near-duplicate` (info): token-set Jaccard similarity >= 0.85 between two
   rules but not exact duplicates.
-- `dead-ref` (warn): a rule references a path that does not exist relative to
+- `dead-ref` (error): a rule references a path that does not exist relative to
   the repo root. Path-like token = contains `/` and matches a file-ish pattern
   (known extension or trailing `/`), or is backticked with an extension.
   Globs are expanded with a simple `*` matcher. Conservative: skip bare words.
