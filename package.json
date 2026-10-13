@@ -1,0 +1,42 @@
+{
+  "name": "rulescope",
+  "version": "0.1.0",
+  "description": "X-ray tool for AI instruction files: see what rules each coding agent loads, and find conflicts, duplicates, dead rules, and context-cap overflows.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "rulescope": "./dist/src/cli.js"
+  },
+  "files": [
+    "dist/src",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "pretest": "npm run build",
+    "test": "node --test \"dist/test/**/*.test.js\"",
+    "prepack": "npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "ai-agents",
+    "instructions",
+    "agents-md",
+    "claude-md",
+    "cursor-rules",
+    "copilot",
+    "lint",
+    "cli"
+  ],
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^26.6.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fuleinist/rulescope.git"
+  }
+}
